@@ -1,0 +1,359 @@
+body {
+    background-color: #0b172a;
+}
+
+.wrapper {
+    background-image: url(../img/apple.png);
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: right;
+    @include tablets {
+        background: none;
+    }
+}
+
+.login {
+    overflow: hidden;
+    padding-bottom: 16px;
+    &__container {
+        max-width: 1240px;
+        width: 90%;
+        margin: 0 auto;
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__header {
+        padding-top: rem(16px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablets {
+            width: 100%;
+        }
+
+        &__white-block {
+            width: rem(140px);
+            height: rem(16px);
+            background-color: #fff;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+    padding-left: rem(22px);
+    padding-right: rem(18px);
+    border: 1px solid #D8E1E6;
+    border-radius: rem(4px);
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(16px);
+    color: #fff;
+    letter-spacing: 0;
+    line-height: rem(24px);
+    outline: unset;
+    &__icon {
+        fill: #fff;
+        width: 17px;
+        height: 17px;
+        margin-right: rem(8px);
+    }
+}
+
+.login {
+    &__content {
+        max-width: rem(440px);
+        margin-top: rem(16px);
+
+        &-list {
+            margin-top: rem(24px);
+        }
+
+        &-item {
+            margin-bottom: rem(15px);
+            padding-left: rem(37px);
+            position: relative;
+            &:before {
+                position: absolute;
+                left: 0;
+                top: rem(5px);
+                content: '';
+                background: url('../img/icons/check.png');
+                width: 18px;
+                height: 14px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            font-family: 'apple';
+            font-size: rem(16px);
+            color: #7A8F99;
+            letter-spacing: -1px;
+            line-height: rem(24px);
+        }
+    }
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(36px);
+    color: #fff;
+    letter-spacing: 0;
+    line-height: rem(48px);
+}
+
+.form {
+    margin-top: rem(48px);
+    @include phones {
+        margin-top: rem(16px);
+    }
+
+    &__item-input {  
+        position: relative;
+        margin-bottom: rem(16px);
+    }
+
+    &__input {
+        width: 100%;
+        height: rem(64px);
+        padding-left: rem(24px);
+        padding-right: rem(24px);
+        padding-top: rem(20px);
+        background-color: #212d3e;
+        border: 1px solid #205f50;
+        border-radius: 4px;
+        font-family: 'apple';
+        font-size: rem(16px);
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: rem(24px);
+        &:focus {
+            border-color: #20a86b;
+            outline: none;
+            &~.form__label {
+                top: rem(8px);
+                font-size: rem(12px);
+            }
+        }
+        &:not(:focus):valid~.form__label {
+            top: rem(5px);
+            font-size: rem(12px);
+        }
+        &:invalid:focus {
+            border-color: #e15433;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        pointer-events: none;
+        left: rem(24px);
+        top: rem(21px);
+        line-height: rem(24px);
+        transition: .3s;
+        font-family: 'apple';
+        font-size: rem(16px);
+        color: #7A8F99;
+        letter-spacing: 0;
+    }
+}
+
+.form__radio-label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    background-color: #212d3e;
+    cursor: pointer;
+    width: rem(98px);
+    height: rem(32px);
+
+    &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        .form__radio-fake {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    }
+
+    &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        .form__radio-fake {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+}
+
+.form__currencies {
+    display: flex;
+    justify-content: space-between;
+    @include phones {
+        justify-content: unset;
+        flex-direction: column;
+    }
+    &-desc {
+        font-family: 'apple';
+        font-size: rem(12px);
+        color: #7A8F99;
+        letter-spacing: 0;
+        max-width: rem(128px);
+        line-height: rem(16px);
+        @include phones {
+            max-width: none;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.form__radio {
+    display: flex;
+    &-input {
+        display: none;
+    }
+
+    &-fake {
+        display: inline-block;
+        width: rem(98px);
+        height: rem(32px);
+        position: relative;
+    }
+
+    &-text {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #79818b;
+        font-family: 'apple';
+        font-size: rem(16px);
+        color: #717883;
+        letter-spacing: 0;
+        text-transform: uppercase;
+    }
+}
+
+.form__radio-input:checked {
+    &+.form__radio-fake {
+        border: 1px solid #20a86b;
+        background-color: #0b172a;
+    }
+    &~.form__radio-text {
+        color: #fff;
+    }
+}
+
+.form__check {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: rem(24px);
+    align-items: center;
+    cursor: pointer;
+    &-input {
+        display: none;
+
+        &:checked {
+            &+.form__check-fake:after {
+                content: '';
+                background: url('../img/icons/check.png');
+                width: 18px;
+                height: 14px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &-fake {
+        display: inline-block;
+        width: rem(32px);
+        height: rem(32px);
+        background-color: #212d3e;
+        border-radius: rem(4px);
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    &-text {
+        font-family: 'apple';
+        font-size: rem(12px);
+        color: #7A8F99;
+        letter-spacing: 0;
+        line-height: rem(16px);
+        margin-left: rem(16px);
+    }
+}
+
+.submit__button {
+    padding: rem(16px);
+    border: 0;
+    width: 100%;
+    background-color: #1C945D;
+    cursor: pointer;
+    margin-top: rem(32px);
+}
+
+.error {
+    position: absolute;
+    left: 9999px;
+    transform: translateX(-50%);
+    padding: rem(8px) rem(16px);
+    background-color: #E15433;
+    border-radius: 4px;
+    bottom: 114%;
+    min-width: 240px;
+    font-family: 'apple';
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24px;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 8px solid transparent;
+        border-bottom-width: 0px;
+        border-top-color: #E15433;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+    }
+
+    &--reg {
+        position: relative;
+        display: none;
+        left: unset;
+        width: 100%;
+        transform: unset;
+        margin-top: rem(24px);
+        padding-left: rem(64px);
+        text-align: left;
+        &:before {
+            content: '';
+            background: url('../img/attention.png');
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            top: 50%;
+            left: rem(24px);
+            transform: translateY(-50%);
+            border: unset;
+        }
+    }
+}

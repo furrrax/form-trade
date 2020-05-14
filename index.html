@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="login">
+            <div class="login__container">
+                <header class="login__header">
+                    <div class="login__header__white-block"></div>
+                    <a href="#" class="button">
+                        <svg class="button__icon">
+                            <use xlink:href="./img/icons/small/user.svg#user"></use>
+                        </svg>
+                        <div class="button__text">Войти</div>
+                    </a>
+                </header>
+                <div class="login__content">
+                    <h1 class="title">Начните торговать прямо сейчас</h1>
+                    <ul class="login__content-list">
+                        <li class="login__content-item">
+                            <p class="login__content-text">Нет спреда — торгуйте с прозрачными и точными котировками</p>
+                        </li>
+                        <li class="login__content-item">
+                            <p class="login__content-text">Достаточно депозита в $10, чтобы начать торговать</p>
+                        </li>
+                    </ul>
+    
+                    <form class="form">
+                        <div class="form__item-input">
+                            <div class="error error-email"></div>
+                            <input type="text" maxlength="20" class="form__input" name="mail" required>
+                            <label class="form__label">Ваш e-mail</label>
+                        </div>
+                        <div class="form__item-input">
+                            <div class="error error-password"></div>
+                            <input type="password" minlength="4" maxlength="10" class="form__input" name="password" required>
+                            <label class="form__label">Придумайте пароль</label>
+                        </div>
+
+                        <div class="form__currencies">
+                            <p class="form__currencies-desc">Валюта для ввода и вывода средств</p>
+                            <div class="form__radio">
+                                <label class="form__radio-label form__radio-label--first">
+                                    <input type="radio" class="form__radio-input" name="currencies" checked>
+                                    <span class="form__radio-fake"></span>
+                                    <span class="form__radio-text">p</span>
+                                </label>
+                                <label class="form__radio-label">
+                                    <input type="radio" class="form__radio-input" name="currencies">
+                                    <span class="form__radio-fake"></span>
+                                    <span class="form__radio-text">s</span>
+                                </label>
+                                <label class="form__radio-label form__radio-label--latest">
+                                    <input type="radio" class="form__radio-input" name="currencies">
+                                    <span class="form__radio-fake"></span>
+                                    <span class="form__radio-text">e</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <label class="form__check">
+                            <input type="checkbox" class="form__check-input" required>
+                            <span class="form__check-fake"></span>
+                            <span class="form__check-text">Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.</span>
+                        </label>
+
+                        <div class="error error--reg">Учётная запись с указанным e-mail уже существует</div>
+                        <button type="submit" class="button submit__button">Зарегистрироваться</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+// resolutions
+$phones: 400px;
+$tablets: 1000px;
+$desktop: 1200px;
+
+@mixin desktop {
+	@media screen and (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+
+html {
+    @include tablets {
+		font-size: rem(14px);
+    }
+    @include phones {
+		font-size: rem(13px);
+    }
+}
