@@ -90,31 +90,54 @@ function validatePassword(field) {
 };
 
 const inputMail = document.querySelector('.form__input--mail');
+const labelMail = document.querySelector('.form__label--mail');
 
-inputMail.addEventListener('keyup', function(e) {
+inputMail.addEventListener('focusin', function(e) {
     let length = this.value.length;
-    let labelMail = document.querySelector('.form__label--mail');
-    labelMail.style.top = '21px';
-    labelMail.style.fontSize = '16px';
+    
+    labelMail.style.top = '8px';
+    labelMail.style.fontSize = '12px';
 
-    if (length > 0 || inputMailFocus == true) {
+    if (length >= 1) {
         labelMail.style.top = '8px';
         labelMail.style.fontSize = '12px';
     } 
-    return;
+
 });
 
-const inputPass = document.querySelector('.form__input--pass');
-
-inputPass.addEventListener('keyup', function(e) {
+inputMail.addEventListener('focusout', function(e) {
     let length = this.value.length;
-    let labelPass = document.querySelector('.form__label--pass');
-    labelPass.style.top = '21px';
-    labelPass.style.fontSize = '16px';
 
-    if (length > 0) {
+    if (length < 1) {
+        labelMail.style.top = '21px';
+        labelMail.style.fontSize = '16px';
+    }
+
+});
+
+
+const inputPass = document.querySelector('.form__input--pass');
+const labelPass = document.querySelector('.form__label--pass');
+
+inputPass.addEventListener('focusin', function(e) {
+    let length = this.value.length;
+    
+    labelPass.style.top = '8px';
+    labelPass.style.fontSize = '12px';
+
+    if (length >= 1) {
         labelPass.style.top = '8px';
         labelPass.style.fontSize = '12px';
     } 
-    return;
+
+});
+
+inputPass.addEventListener('focusout', function(e) {
+    let length = this.value.length;
+
+    if (length < 1) {
+        labelPass.style.top = '21px';
+        labelPass.style.fontSize = '16px';
+    }
+
 });
