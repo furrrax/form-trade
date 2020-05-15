@@ -9,7 +9,7 @@ send.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(myForm)) {
-
+        //console.log(validateForm(myForm));
         const formData = new FormData(myForm);
 
         formData.append('email', myForm.elements.email.value);
@@ -49,9 +49,11 @@ function validateForm(form) {
     if (!validatePassword(form.elements.password)) {
         valid = false;
     }
-    
+
     return valid;
 };
+
+
 
 function validateMail(field) {
     if (!field.checkValidity()) {
@@ -87,16 +89,32 @@ function validatePassword(field) {
     }
 };
 
-const input = document.querySelector('.form__input');
-const label = document.querySelector('.form__label');
+const inputMail = document.querySelector('.form__input--mail');
 
-input.addEventListener('keyup', function(e) {
-    var length = this.value.length
-    if (length >= 1) {
-        label.style.top = '8px';
-        label.style.fontSize = '12px';
-    } else {
-        label.style.top = '21px';
-        label.style.fontSize = '16px';
-    }
+inputMail.addEventListener('keyup', function(e) {
+    let length = this.value.length;
+    let labelMail = document.querySelector('.form__label--mail');
+    labelMail.style.top = '21px';
+    labelMail.style.fontSize = '16px';
+
+    if (length > 0 || inputMailFocus == true) {
+        labelMail.style.top = '8px';
+        labelMail.style.fontSize = '12px';
+    } 
+    return;
+});
+
+const inputPass = document.querySelector('.form__input--pass');
+
+inputPass.addEventListener('keyup', function(e) {
+    let length = this.value.length;
+    let labelPass = document.querySelector('.form__label--pass');
+    labelPass.style.top = '21px';
+    labelPass.style.fontSize = '16px';
+
+    if (length > 0) {
+        labelPass.style.top = '8px';
+        labelPass.style.fontSize = '12px';
+    } 
+    return;
 });

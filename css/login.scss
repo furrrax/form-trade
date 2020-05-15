@@ -129,7 +129,7 @@ body {
         padding-right: rem(24px);
         padding-top: rem(20px);
         background-color: #212d3e;
-        border: 1px solid #205f50;
+        border: none;
         border-radius: 4px;
         font-family: 'apple';
         font-size: rem(16px);
@@ -137,7 +137,7 @@ body {
         letter-spacing: 0;
         line-height: rem(24px);
         &:focus {
-            border-color: #20a86b;
+            border: 1px solid #20a86b;
             outline: none;
             &~.form__label {
                 top: rem(8px);
@@ -151,6 +151,9 @@ body {
         &:invalid:focus {
             border-color: #e15433;
         }
+        &:hover {
+            border: 1px solid #205f50;
+        }
     }
 
     &__label {
@@ -159,7 +162,7 @@ body {
         left: rem(24px);
         top: rem(21px);
         line-height: rem(24px);
-        transition: .3s;
+        transition: .1s;
         font-family: 'apple';
         font-size: rem(16px);
         color: #7A8F99;

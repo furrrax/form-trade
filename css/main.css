@@ -454,7 +454,7 @@ body {
     padding-right: 1.5rem;
     padding-top: 1.25rem;
     background-color: #212d3e;
-    border: 1px solid #205f50;
+    border: none;
     border-radius: 4px;
     font-family: 'apple';
     font-size: 1rem;
@@ -462,7 +462,7 @@ body {
     letter-spacing: 0;
     line-height: 1.5rem; }
     .form__input:focus {
-      border-color: #20a86b;
+      border: 1px solid #20a86b;
       outline: none; }
       .form__input:focus ~ .form__label {
         top: 0.5rem;
@@ -472,13 +472,15 @@ body {
       font-size: 0.75rem; }
     .form__input:invalid:focus {
       border-color: #e15433; }
+    .form__input:hover {
+      border: 1px solid #205f50; }
   .form__label {
     position: absolute;
     pointer-events: none;
     left: 1.5rem;
     top: 1.3125rem;
     line-height: 1.5rem;
-    transition: .3s;
+    transition: .1s;
     font-family: 'apple';
     font-size: 1rem;
     color: #7A8F99;
