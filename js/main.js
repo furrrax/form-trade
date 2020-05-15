@@ -139,5 +139,4 @@ inputPass.addEventListener('focusout', function(e) {
         labelPass.style.top = '21px';
         labelPass.style.fontSize = '16px';
     }
-
 });
