@@ -468,7 +468,7 @@ body {
         top: 0.5rem;
         font-size: 0.75rem; }
     .form__input:not(:focus):valid ~ .form__label {
-      top: 0.3125rem;
+      top: 0.5rem;
       font-size: 0.75rem; }
     .form__input:invalid:focus {
       border-color: #e15433; }

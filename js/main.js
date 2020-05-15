@@ -86,3 +86,17 @@ function validatePassword(field) {
         return true;
     }
 };
+
+const input = document.querySelector('.form__input');
+const label = document.querySelector('.form__label');
+
+input.addEventListener('keyup', function(e) {
+    var length = this.value.length
+    if (length >= 1) {
+        label.style.top = '8px';
+        label.style.fontSize = '12px';
+    } else {
+        label.style.top = '21px';
+        label.style.fontSize = '16px';
+    }
+});

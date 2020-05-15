@@ -145,7 +145,7 @@ body {
             }
         }
         &:not(:focus):valid~.form__label {
-            top: rem(5px);
+            top: rem(8px);
             font-size: rem(12px);
         }
         &:invalid:focus {
