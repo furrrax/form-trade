@@ -60,9 +60,13 @@ body {
     outline: unset;
     &__icon {
         fill: #fff;
-        width: 17px;
-        height: 17px;
+        width: rem(17px);
+        height: rem(17px);
         margin-right: rem(8px);
+        @include phones {
+            width: rem(20px);
+            height: rem(20px);
+        }
     }
 }
 
@@ -86,8 +90,13 @@ body {
                 top: rem(5px);
                 content: '';
                 background: url('../img/icons/check.png');
+                background-repeat: no-repeat;
                 width: 18px;
                 height: 14px;
+                @include phones {
+                    width: rem(20px);
+                    height: rem(18px);
+                }
             }
             &:last-child {
                 margin-bottom: 0;
@@ -215,7 +224,7 @@ body {
         line-height: rem(16px);
         @include phones {
             max-width: none;
-            margin-bottom: 5px;
+            margin-bottom: rem(5px);
         }
     }
 }
@@ -271,12 +280,17 @@ body {
             &+.form__check-fake:after {
                 content: '';
                 background: url('../img/icons/check.png');
-                width: 18px;
-                height: 14px;
+                background-repeat: no-repeat;
+                width: rem(18px);
+                height: rem(14px);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                @include phones {
+                    width: rem(20px);
+                    height: rem(18px);
+                }
             }
         }
     }
@@ -324,7 +338,7 @@ body {
     color: #fff;
     letter-spacing: 0;
     text-align: center;
-    line-height: 24px;
+    line-height: rem(24px);
     &:before {
         content: "";
         display: block;
@@ -351,13 +365,18 @@ body {
         &:before {
             content: '';
             background: url('../img/attention.png');
-            width: 17px;
-            height: 17px;
+            background-repeat: no-repeat;
+            width: rem(17px);
+            height: rem(17px);
             position: absolute;
             top: 50%;
             left: rem(24px);
             transform: translateY(-50%);
             border: unset;
+            @include phones {
+                width: rem(21px);
+                height: rem(21px);
+            }
         }
     }
 }

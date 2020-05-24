@@ -402,9 +402,13 @@ body {
   outline: unset; }
   .button__icon {
     fill: #fff;
-    width: 17px;
-    height: 17px;
+    width: 1.0625rem;
+    height: 1.0625rem;
     margin-right: 0.5rem; }
+    @media screen and (max-width: 400px) {
+      .button__icon {
+        width: 1.25rem;
+        height: 1.25rem; } }
 
 .login__content {
   max-width: 27.5rem;
@@ -421,8 +425,13 @@ body {
       top: 0.3125rem;
       content: '';
       background: url("../img/icons/check.png");
+      background-repeat: no-repeat;
       width: 18px;
       height: 14px; }
+      @media screen and (max-width: 400px) {
+        .login__content-item:before {
+          width: 1.25rem;
+          height: 1.125rem; } }
     .login__content-item:last-child {
       margin-bottom: 0; }
   .login__content-text {
@@ -524,7 +533,7 @@ body {
     @media screen and (max-width: 400px) {
       .form__currencies-desc {
         max-width: none;
-        margin-bottom: 5px; } }
+        margin-bottom: 0.3125rem; } }
 
 .form__radio {
   display: flex; }
@@ -565,12 +574,17 @@ body {
     .form__check-input:checked + .form__check-fake:after {
       content: '';
       background: url("../img/icons/check.png");
-      width: 18px;
-      height: 14px;
+      background-repeat: no-repeat;
+      width: 1.125rem;
+      height: 0.875rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+      @media screen and (max-width: 400px) {
+        .form__check-input:checked + .form__check-fake:after {
+          width: 1.25rem;
+          height: 1.125rem; } }
   .form__check-fake {
     display: inline-block;
     width: 2rem;
@@ -609,7 +623,7 @@ body {
   color: #fff;
   letter-spacing: 0;
   text-align: center;
-  line-height: 24px; }
+  line-height: 1.5rem; }
   .error:before {
     content: "";
     display: block;
@@ -634,10 +648,15 @@ body {
     .error--reg:before {
       content: '';
       background: url("../img/attention.png");
-      width: 17px;
-      height: 17px;
+      background-repeat: no-repeat;
+      width: 1.0625rem;
+      height: 1.0625rem;
       position: absolute;
       top: 50%;
       left: 1.5rem;
       transform: translateY(-50%);
       border: unset; }
+      @media screen and (max-width: 400px) {
+        .error--reg:before {
+          width: 1.3125rem;
+          height: 1.3125rem; } }
