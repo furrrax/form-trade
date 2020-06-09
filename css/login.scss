@@ -63,6 +63,10 @@ body {
         width: rem(17px);
         height: rem(17px);
         margin-right: rem(8px);
+        @include tablets {
+            width: rem(19px);
+            height: rem(19px);
+        }
         @include phones {
             width: rem(20px);
             height: rem(20px);
@@ -93,6 +97,10 @@ body {
                 background-repeat: no-repeat;
                 width: rem(18px);
                 height: rem(14px);
+                @include tablets {
+                    width: rem(19px);
+                    height: rem(17px);
+                }
                 @include phones {
                     width: rem(20px);
                     height: rem(18px);
@@ -287,6 +295,10 @@ body {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                @include tablets {
+                    width: rem(19px);
+                    height: rem(17px);
+                }
                 @include phones {
                     width: rem(20px);
                     height: rem(18px);

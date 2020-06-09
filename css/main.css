@@ -405,6 +405,10 @@ body {
     width: 1.0625rem;
     height: 1.0625rem;
     margin-right: 0.5rem; }
+    @media screen and (max-width: 1000px) {
+      .button__icon {
+        width: 1.1875rem;
+        height: 1.1875rem; } }
     @media screen and (max-width: 400px) {
       .button__icon {
         width: 1.25rem;
@@ -428,6 +432,10 @@ body {
       background-repeat: no-repeat;
       width: 1.125rem;
       height: 0.875rem; }
+      @media screen and (max-width: 1000px) {
+        .login__content-item:before {
+          width: 1.1875rem;
+          height: 1.0625rem; } }
       @media screen and (max-width: 400px) {
         .login__content-item:before {
           width: 1.25rem;
@@ -581,6 +589,10 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+      @media screen and (max-width: 1000px) {
+        .form__check-input:checked + .form__check-fake:after {
+          width: 1.1875rem;
+          height: 1.0625rem; } }
       @media screen and (max-width: 400px) {
         .form__check-input:checked + .form__check-fake:after {
           width: 1.25rem;
